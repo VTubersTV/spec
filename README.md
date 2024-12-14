@@ -177,6 +177,81 @@ npm run dev
 - Development: Community-driven
 - Structure: Non-profit
 
+## 9. Live Streaming Specifications
+
+> [!IMPORTANT]
+> This section is a work in progress and will be updated as the project evolves. **This is a rough draft.**
+
+### 9.1 RTMP Configuration
+
+#### Server Details
+- Primary RTMP Endpoint: `rtmp://ingest.vtubers.tv/live`
+- Stream Key Format: `{channel_id}_{secret_key}`
+- Connection Protocol: RTMP/RTMPS (TLS 1.3)
+- Port: 1935 (RTMP), 443 (RTMPS)
+
+#### Stream Requirements
+- Maximum Bitrate: 8000 Kbps
+- Recommended Bitrate: 4500-6000 Kbps
+- Minimum Bitrate: 2000 Kbps
+- Keyframe Interval: 2 seconds
+- Maximum Resolution: 1920x1080 (1080p)
+- Frame Rates: 30/60 fps
+
+#### Video Encoding
+- Codec: H.264/AVC
+- Profile: High
+- Level: 4.2
+- B-frames: 2
+- Reference Frames: ≤ 4
+- Scene Change Detection: Enabled
+- Rate Control: CBR preferred
+
+#### Audio Encoding
+- Codec: AAC-LC
+- Sample Rate: 48 kHz
+- Bitrate: 128-320 Kbps
+- Channels: Stereo
+- Volume Normalization: -14 LUFS
+
+### 9.2 Transcoding Pipeline
+
+```mermaid
+graph LR
+    A[RTMP Input] --> B[Input Buffer]
+    B --> C[Transcoder]
+    C --> D[HLS Packager]
+    C --> E[DASH Packager]
+    D --> F[CDN Distribution]
+    E --> F
+```
+
+#### Quality Variants
+| Profile | Resolution | Bitrate | FPS |
+|---------|------------|---------|-----|
+| Source  | 1080p      | Original| Original |
+| High    | 1080p      | 6000    | 60  |
+| Medium  | 720p       | 3500    | 60  |
+| Low     | 480p       | 1500    | 30  |
+| Mobile  | 360p       | 800     | 30  |
+
+### 9.3 Latency Options
+
+#### Standard Latency
+- Protocol: HLS/DASH
+- Expected Delay: 3-6 seconds
+- Buffer Size: 2s
+- Suitable for: Most broadcasts
+
+### 9.4 Stream Health Monitoring
+
+- Real-time bitrate analysis
+- Frame drop detection
+- Audio sync monitoring
+- Network stability metrics
+- Automatic quality adjustment
+- Stream health score (0-100)
+
 ## References
 
 1. Express.js Documentation: https://expressjs.com/
@@ -186,12 +261,27 @@ npm run dev
 5. Node.js Best Practices: https://nodejs.org/en/docs/guides/
 6. WebSocket Protocol: https://datatracker.ietf.org/doc/html/rfc6455
 
+### Streaming References
+7. RTMP Specification: https://rtmp.veriskope.com/docs/spec/
+8. HLS Specification (RFC 8216): https://tools.ietf.org/html/rfc8216
+9. DASH Standard: https://dashif.org/docs/DASH-IF-IOP-v4.3.pdf
+10. WebRTC Standards: https://www.w3.org/TR/webrtc/
+11. FFmpeg Documentation: https://ffmpeg.org/documentation.html
+12. H.264 Video Encoding Guide: https://trac.ffmpeg.org/wiki/Encode/H.264
+13. AAC Audio Encoding Guide: https://trac.ffmpeg.org/wiki/Encode/AAC
+
+### Additional Resources
+14. Video Compression Guide: https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Video_codecs
+15. Audio Loudness Standards (ITU-R BS.1770): https://www.itu.int/rec/R-REC-BS.1770
+16. CDN Implementation Guide: https://www.cloudflare.com/learning/cdn/what-is-a-cdn/
+
 ## Version History
 
 | Version | Date | Description |
 |---------|------|-------------|
 | 1.0.0 | 12/14/2024 11:23:17 AM | Initial specification document |
-|
+| 1.0.1 | 12/14/2024 12:38:42 PM | Added live streaming specifications |
+
 
 ---
 
