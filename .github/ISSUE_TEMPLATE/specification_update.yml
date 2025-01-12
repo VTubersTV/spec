@@ -1,0 +1,51 @@
+name: 🔄 Specification Update
+description: Propose changes to an existing specification
+title: "[UPDATE]: "
+labels: ["update", "triage"]
+body:
+  - type: dropdown
+    id: spec-file
+    attributes:
+      label: Specification File
+      description: Which specification needs to be updated?
+      options:
+        - system-architecture.md
+        - technical-stack.md
+        - security.md
+        - live-streaming.md
+        - chat-system.md
+        - versioning.md
+    validations:
+      required: true
+      
+  - type: textarea
+    id: current-state
+    attributes:
+      label: Current State
+      description: What is the current state of the specification that needs updating?
+    validations:
+      required: true
+      
+  - type: textarea
+    id: proposed-changes
+    attributes:
+      label: Proposed Changes
+      description: What changes would you like to see?
+    validations:
+      required: true
+      
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Rationale
+      description: Why are these changes necessary?
+    validations:
+      required: true
+      
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Contribution Guidelines
+      options:
+        - label: I have read the [CONTRIBUTING](../CONTRIBUTING.md) document
+          required: true 

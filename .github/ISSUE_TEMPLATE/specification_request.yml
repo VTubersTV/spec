@@ -1,0 +1,51 @@
+name: 📝 Specification Request
+description: Propose a new specification document
+title: "[SPEC]: "
+labels: ["specification", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to propose a new specification!
+        
+  - type: input
+    id: spec-name
+    attributes:
+      label: Specification Name
+      description: What would you like to call this specification?
+      placeholder: "e.g., authentication-flow"
+    validations:
+      required: true
+      
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe what this specification should cover
+      placeholder: "This specification should define..."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: goals
+    attributes:
+      label: Goals
+      description: What are the main goals this specification should address?
+      placeholder: "- Define...\n- Establish...\n- Document..."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: related-specs
+    attributes:
+      label: Related Specifications
+      description: List any existing specifications that this would relate to
+      placeholder: "- system-architecture.md\n- security.md"
+      
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Contribution Guidelines
+      options:
+        - label: I have read the [CONTRIBUTING](../CONTRIBUTING.md) document
+          required: true 
