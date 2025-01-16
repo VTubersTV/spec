@@ -6,7 +6,7 @@ VTubersTV is an open-source, non-profit streaming platform designed specifically
 
 ## Table of Contents
 
-1. [versioning](./documents/1-versioning.md)
+1. [versioning](./documents/1-versions.md)
 2. [system-architecture](./documents/2-system-architecture.md)
 3. [technical-stack](./documents/3-technical-stack.md)
 4. [security](./documents/4-security.md)
