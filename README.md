@@ -6,14 +6,19 @@ VTubersTV is an open-source, non-profit streaming platform designed specifically
 
 ## Table of Contents
 
-1. [versioning](./documents/1-versions.md)
-2. [system-architecture](./documents/2-system-architecture.md)
-3. [technical-stack](./documents/3-technical-stack.md)
-4. [security](./documents/4-security.md)
-5. [live-streaming](./documents/5-live-streaming.md)
-6. [chat-system](./documents/6-chat-system.md)
-
-## Frequently Asked Questions (FAQ)
+1. [How we work](./documents/1-governance.md)
+2. [System Architecture](./documents/2-system-architecture.md)
+3. [Security](./documents/3-security.md)
+4. [Technical Stack](./documents/4-technical-stack.md)
+5. [Live Streaming](./documents/5-live-streaming.md)
+6. [Live Chat](./documents/6-chat-system.md)
+7. [Versioning](./documents/7-versions.md)
+8. [Moderation](./documents/8-moderation.md)
+9. [Moderation Handbook](./documents/9-mod-handbook.md)
+10. [Appeals](./documents/10-appeals.md)
+11. [Streaming](./documents/11-streaming.md)
+12. [Models](./documents/12-models.md)
+13. [Network](./documents/13-network.md)
 
 <details>
 <summary>What is open-source software?</summary>
@@ -170,4 +175,125 @@ Learn more:
 - ["Free as in Freedom" Explained](https://en.wikipedia.org/wiki/Free_software)
 - [Sustainable Open Source](https://opensource.guide/getting-paid/)
 - [Platform Cooperativism](https://en.wikipedia.org/wiki/Platform_cooperative)
+</details>
+
+<details>
+<summary>What makes VTubersTV different from other platforms?</summary>
+
+VTubersTV stands out in several key ways:
+
+1. **VTuber-Specific Features**
+   - Avatar tracking optimization
+   - Model-friendly encoding
+   - Support for different model types
+      - 2D/3D models
+      - Live 2D/3D models
+      - Static 2D/3D models
+      - VRChat models
+   - Specialized chat interactions
+   - VTuber-focused discovery
+
+2. **Technical Advantages**
+   - Ultra-low latency streaming
+   - High-quality model rendering
+   - Efficient bandwidth usage
+   - Better mobile support
+   - Advanced chat features
+
+3. **Community Ownership**
+   - Democratic decision making
+   - Transparent operations
+   - Community-driven features
+   - Fair monetization
+   - Open development
+
+4. **Privacy Focus**
+   - No tracking or analytics
+   - Data minimization
+   - Local processing
+   - Strong encryption
+   - User control
+
+Learn more:
+- [VTuber Technology](https://en.wikipedia.org/wiki/Virtual_YouTuber#Technology)
+- [Streaming Technology](https://en.wikipedia.org/wiki/Streaming_media)
+- [Community Ownership](https://en.wikipedia.org/wiki/Platform_cooperative)
+</details>
+
+<details>
+<summary>How does content moderation work?</summary>
+
+Our moderation system is community-driven and transparent:
+
+1. **Moderation Levels**
+   - Community moderators
+   - Channel moderators
+   - AI assistance
+   - Appeals system
+   - Public moderation logs
+
+2. **Content Guidelines**
+   - Clear community standards
+   - Cultural sensitivity
+   - Age-appropriate content
+   - Fair enforcement
+   - Regular reviews
+
+3. **Tools and Features**
+   - Real-time chat filtering
+   - Content warnings
+   - Report system
+   - Moderator dashboard
+   - Analytics and trends
+
+4. **Appeals Process**
+   - Fair hearing
+   - Community review
+   - Quick resolution
+   - Transparency
+   - Learning opportunities
+
+Learn more:
+- [Community Guidelines](./documents/8-moderation.md)
+- [Moderation Tools](./documents/9-mod-handbook.md)
+- [Appeals Process](./documents/10-appeals.md)
+</details>
+
+<details>
+<summary>How can I ensure the best streaming quality?</summary>
+
+Follow these guidelines for optimal streaming:
+
+1. **Stream Settings**
+   - Resolution: 1080p max
+   - Framerate: 60fps max
+   - Bitrate: 6000kbps max
+   - Keyframe: 2 seconds
+   - x264 medium preset
+
+2. **Model Optimization**
+   - Reduce polygon count
+   - Optimize textures
+   - Minimize physics
+   - Use LODs
+   - Cache animations
+
+3. **Network Setup**
+   - Wired connection
+   - QoS settings
+   - Server selection
+   - Backup connection
+   - Network monitoring
+
+4. **Hardware Usage**
+   - GPU encoding
+   - CPU management
+   - RAM allocation
+   - Storage speed
+   - Temperature control
+
+Learn more:
+- [Streaming Guide](./documents/11-streaming.md)
+- [Model Optimization](./documents/12-models.md)
+- [Network Setup](./documents/13-network.md)
 </details>

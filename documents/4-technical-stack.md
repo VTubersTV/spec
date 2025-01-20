@@ -1,6 +1,10 @@
-# technical-stack
+---
+title: Technical Stack
+---
 
-Created: 2025-01-12 07:15:47
+# Technical Stack
+
+Created: 2025-01-11 22:15:47 UTC
 
 ## Overview
 

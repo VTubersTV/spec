@@ -1,0 +1,120 @@
+# Site settings
+title: VTubersTV Technical Specifications
+description: Technical documentation and specifications for the VTubersTV platform
+url: "https://spec.vtubers.tv"
+baseurl: ""
+repository: vtuberstv/spec
+
+# Theme settings
+remote_theme: just-the-docs/just-the-docs
+color_scheme: light
+
+# Source directory settings
+source: ..
+destination: ../_site
+
+# Include directories and files
+include:
+  - documents
+  - templates
+  - rfcs
+  - decisions
+  - www/assets
+  - www/_includes
+  - www/_layouts
+  - www/index.md
+
+# Exclude unnecessary files
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .git
+  - README.md
+  - LICENSE
+  - CNAME
+  - "*.log"
+  - scripts
+  - CODE_OF_CONDUCT.md
+  - CONTRIBUTING.md
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: "documents"
+    values:
+      layout: default
+      has_toc: true
+      nav_order: 1
+  - scope:
+      path: "templates"
+    values:
+      layout: default
+      has_toc: true
+      nav_order: 2
+  - scope:
+      path: "rfcs"
+    values:
+      layout: default
+      has_toc: true
+      nav_order: 3
+  - scope:
+      path: "decisions"
+    values:
+      layout: default
+      has_toc: true
+      nav_order: 4
+
+# Search settings
+search_enabled: true
+search:
+  heading_level: 3
+  previews: 3
+  preview_words_before: 5
+  preview_words_after: 10
+  tokenizer_separator: /[\s/]+/
+  rel_url: true
+  button: true
+
+# Navigation
+nav_external_links:
+  - title: VTubersTV Platform
+    url: https://github.com/vtuberstv/platform
+    hide_icon: false
+
+# Makes external links open in a new tab
+aux_links_new_tab: true
+
+# Build settings
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+highlighter: rouge
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-github-metadata
+  - jekyll-relative-links
+
+# Compress HTML in production
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  startings: []
+  blanklines: false
+  profile: false
+
+# Layout settings
+layouts_dir: www/_layouts
+includes_dir: www/_includes

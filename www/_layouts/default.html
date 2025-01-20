@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title | default: site.title }}</title>
+    
+    <!-- Base styles -->
+    <link rel="stylesheet" href="{{ '/www/assets/css/style.css' | relative_url }}">
+    
+    <!-- Layout-specific styles -->
+    {% if page.layout != 'default' %}
+    <link rel="stylesheet" href="{{ '/www/assets/css/layouts/' | append: page.layout | append: '.css' | relative_url }}">
+    {% endif %}
+</head>
+<body>
+    <div class="layout-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <h2>Documentation</h2>
+                    <ul>
+                        {% for doc in site.pages %}
+                            {% if doc.path contains 'documents/' %}
+                            <li><a href="{{ doc.url | relative_url }}">{{ doc.title }}</a></li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <h2>RFCs</h2>
+                    <ul>
+                        {% for rfc in site.pages %}
+                            {% if rfc.path contains 'rfcs/' %}
+                            <li><a href="{{ rfc.url | relative_url }}">{{ rfc.title }}</a></li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <h2>ADRs</h2>
+                    <ul>
+                        {% for adr in site.pages %}
+                            {% if adr.path contains 'adrs/' %}
+                            <li><a href="{{ adr.url | relative_url }}">{{ adr.title }}</a></li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <h2>Templates</h2>
+                    <ul>
+                        {% for template in site.pages %}
+                            {% if template.path contains 'templates/' %}
+                            <li><a href="{{ template.url | relative_url }}">{{ template.title }}</a></li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li><a href="https://github.com/vtuberstv/spec">GitHub Repository</a></li>
+                        <li><a href="https://choco.rip/s/vtuberstv">Discord Community</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main content -->
+        <main class="main-content">
+            <div class="content-wrapper">
+                {{ content }}
+            </div>
+        </main>
+    </div>
+
+    <!-- Base scripts -->
+    <script src="{{ '/www/assets/js/main.js' | relative_url }}"></script>
+    
+    <!-- Layout-specific scripts -->
+    {% if page.layout != 'default' %}
+    <script src="{{ '/www/assets/js/layouts/{{ page.layout }}.js' | relative_url }}"></script>
+    {% endif %}
+</body>
+</html>
