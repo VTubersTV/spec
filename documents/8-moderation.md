@@ -41,18 +41,6 @@ This document outlines VTubersTV's community guidelines and moderation policies,
      - Age verification (18+)
      - Government ID verification
      - Clear NSFW content tagging
-   - Family-friendly hours maintained:
-     - JST: 12:00 PM - 8:00 PM
-     - PT: 7:00 PM - 3:00 AM (previous day)
-     - UTC: 3:00 AM - 11:00 AM
-     - CET: 4:00 AM - 12:00 PM
-     - AEST: 1:00 PM - 9:00 PM
-     - IST: 8:30 AM - 4:30 PM
-     - BRT: 12:00 AM - 8:00 AM
-     - EST: 8:00 AM - 4:00 PM
-     - CST: 7:00 AM - 3:00 PM
-     - MST: 6:00 AM - 2:00 PM
-     - HST: 5:00 AM - 1:00 PM
 
 2. **Language & Behavior**
    - No hate speech or discrimination
