@@ -9,7 +9,7 @@ layout: default
 This RFC proposes the implementation of a scalable real-time chat system for VTubersTV, providing interactive communication capabilities with support for moderation, emotes, and special features like SuperChat equivalents.
 
 ## Basic Information
-- **Author(s):** chocoOnEstrogen
+- **Author(s):** korpselgbt
 - **Date Created:** 2024-01-25
 - **Status:** DRAFT
 - **Target Version:** v1.0.0

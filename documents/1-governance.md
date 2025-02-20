@@ -16,7 +16,7 @@ This document outlines the governance structure for the project, defining how de
 
 ### Composition
 - A small group of trusted maintainers (3-5 members initially)
-- Led by the project founder ([@Stella](https://github.com/chocoOnEstrogen))
+- Led by the project founder ([@Stella](https://github.com/korpselgbt))
 - Members selected based on demonstrated expertise and consistent contributions
 
 ### Responsibilities
