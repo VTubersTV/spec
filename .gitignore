@@ -1,0 +1,65 @@
+# Node
+node_modules/
+dist/
+.env
+.npm/
+package-lock.json
+yarn.lock
+.pnpm-debug.log
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.env
+.env/
+venv/
+env/
+*.egg-info/
+pip-log.txt
+
+# Rust
+/target/
+Cargo.lock
+
+# TypeScript
+*.tsbuildinfo
+
+# JavaScript
+*.log
+
+# Next.js
+.next/
+out/
+.vercel/
+
+# Astro
+/.astro/
+public/
+
+# PHP
+vendor/
+composer.lock
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# Editor stuff
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+*.tmp
+*.orig
+*.sublime-workspace
+*.sublime-project
+*.code-workspace
+*.iml
+*.log
