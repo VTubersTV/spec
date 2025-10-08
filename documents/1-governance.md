@@ -14,7 +14,7 @@ This document outlines the governance structure for the VTubers.TV project. The 
 
 ### Owners
 
-- **Owners**: The project is led by the founders (you and your co-owner), who have the final say on all decisions.
+- **Owners**: The project is led by the founders (Lexi and Lmay), who have the final say on all decisions.
 - Responsible for setting the vision, making strategic and technical decisions, approving features, and resolving disputes.
 - May delegate responsibilities to trusted maintainers or contributors but retain ultimate authority.
 
